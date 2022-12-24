@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../UI/Card";
 import ProductsItems from "./ProductsItems";
-//import classes from "./AvailableProducts.module.css";
+import classes from "./AvailableProducts.module.css";
 const cartElements = [
   {
     title: "Colors",
@@ -46,9 +46,11 @@ function AvailableProducts(props) {
     />
   ));
   return (
-    <React.Fragment>
-      <Card>{myList}</Card>
-    </React.Fragment>
+    <div className={classes.meal}>
+      <ul>
+        <Card>{myList}</Card>
+      </ul>
+    </div>
   );
 }
 
