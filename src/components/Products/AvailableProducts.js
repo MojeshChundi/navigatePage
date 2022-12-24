@@ -35,10 +35,10 @@ const cartElements = [
 ];
 
 function AvailableProducts(props) {
-  const myList = cartElements.map((item) => (
+  const myList = cartElements.map((item, index) => (
     <ProductsItems
-      key={item.id}
-      id={item.id}
+      key={index}
+      id={index}
       title={item.title}
       imageUrl={<img src={item.imageUrl} alt="images" />}
       price={item.price}
@@ -46,11 +46,9 @@ function AvailableProducts(props) {
     />
   ));
   return (
-    <section>
-      <Card>
-        <ul>{myList}</ul>
-      </Card>
-    </section>
+    <React.Fragment>
+      <Card>{myList}</Card>
+    </React.Fragment>
   );
 }
 
