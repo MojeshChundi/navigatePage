@@ -8,6 +8,14 @@ import classes from "./Cart.module.css";
 function Cart(props) {
   const CartCtx = useContext(CartContext);
 
+  const cartRemoveHandler = (id) => {
+    CartCtx.removeItem(id);
+  };
+
+  const cartAddHandler = (item) => {
+    CartCtx.addItem(item);
+  };
+
   const total = `$${CartCtx.TotalAmount.toFixed(2)}`;
   const hasItems = CartCtx.items.length > 0;
 
@@ -19,7 +27,9 @@ function Cart(props) {
           title={item.title}
           price={item.price}
           amount={item.amount}
-          imageUrl={<img src={item.imageUrl} alt="images" />}
+          imageUrl={<img src={item.imageUrl} alt="img" />}
+          onRemove={cartRemoveHandler.bind(null, item.id)}
+          onAdd={cartAddHandler.bind(null, item)}
         />
       ))}
     </ul>

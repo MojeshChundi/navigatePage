@@ -15,7 +15,7 @@ function About(props) {
       <h1>ABOUT</h1>
       <div>
         <img
-          src="https://images.ctfassets.net/js6ap5wzepad/4BzuW2fBLK6X8EuS6FzsBp/eed126e4ef4bbbb1302f12e22723fa8c/300x300.jpeg?w=299&fit=fill&q=80&fm=webp"
+          src="https://images.ctfassets.net/js6ap5wzepad/4JF5W900ySBDkWzz6X9L5s/143b0593a949d4e36e66876e7c249711/300x300.jpeg?w=299&fit=fill&q=80&fm=webp"
           alt="music"
         />
       </div>
