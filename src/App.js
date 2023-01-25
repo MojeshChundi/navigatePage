@@ -8,6 +8,7 @@ import AvailableProducts from "./components/Products/AvailableProducts";
 import About from "./components/pages/About";
 import { Route } from "react-router-dom";
 import ContactUs from "./components/pages/ContactUs";
+import Colors from "./components/pages/Colors";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/ContactUs">
           <ContactUs />
+        </Route>
+        <Route path="/homie">
+          <Colors />
         </Route>
       </main>
     </CartContextProvider>

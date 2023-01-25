@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../UI/Card";
 import ProductsItems from "./ProductsItems";
 import classes from "./AvailableProducts.module.css";
+import { Link } from "react-router-dom";
 const cartElements = [
   {
     title: "Colors",
@@ -40,7 +41,11 @@ function AvailableProducts(props) {
       key={index}
       id={index}
       title={item.title}
-      imageUrl={<img src={item.imageUrl} alt="images" />}
+      imageUrl={
+        <Link to="/homie">
+          <img src={item.imageUrl} alt="images" />
+        </Link>
+      }
       price={item.price}
       quantity={item.quantity}
     />
