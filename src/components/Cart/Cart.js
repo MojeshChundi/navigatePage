@@ -27,7 +27,7 @@ function Cart(props) {
           title={item.title}
           price={item.price}
           amount={item.amount}
-          imageUrl={<img src={item.imageUrl} alt="img" />}
+          imageUrl={item.imageUrl}
           onRemove={cartRemoveHandler.bind(null, item.id)}
           onAdd={cartAddHandler.bind(null, item)}
         />
